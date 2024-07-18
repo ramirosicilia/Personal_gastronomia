@@ -99,4 +99,68 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Cambiar de video cada 9 segundos
     setInterval(deslizarVideos, 9000);
-});
+}); 
+
+
+
+/*=========================================================================*/ 
+
+
+
+const nav=document.querySelector('.nav') 
+
+const menu=document.getElementById('icon-bar') 
+
+const servicios=document.querySelector('.menu-Servicios')
+
+ let validar=true
+
+
+
+ nav.addEventListener('click',()=>{
+    menu.classList.remove('modificado')
+    servicios.classList.remove('modificado')
+    nav.classList.remove('activo') 
+   
+          
+        
+  
+})
+
+
+
+menu.addEventListener('click',(e)=>{ 
+   
+
+       if(!validar){  
+        menu.classList.remove('modificado')
+        servicios.classList.remove('modificado')
+        nav.classList.remove('activo') 
+        
+          
+    
+       }  
+
+    
+
+      
+        else{ 
+            menu.classList.add('modificado')
+            servicios.classList.add('modificado')
+            nav.classList.add('activo')
+            menu.style.position='fixex'
+            menu.style.top='0px'
+            menu.style.left='0px'
+          
+           
+           
+           
+
+        }  
+
+        validar=!validar
+
+})  
+
+
+  

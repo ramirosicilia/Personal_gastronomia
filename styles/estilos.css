@@ -1,6 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -35,7 +42,7 @@ header {
 
 .contenedor {
     width: 90%;
-    padding: 3rem 0;
+    padding: 6rem 0;
     margin:  auto;
 
 } 
@@ -43,7 +50,6 @@ header {
 
  .nav{
     display: flex;
-    height: 7rem;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -68,14 +74,21 @@ header {
     width: 60%; 
     display: flex;
     gap: 4rem; 
-    opacity: .7;
+    opacity: .7; 
+    position: relative;
+    bottom: 3rem;
+    
    
  } 
  
  .imagen-logo{ 
     border-radius: 6%; 
 
- } 
+ }  
+
+ .logo__responsive{
+    display: none;
+ }
 
  
 
@@ -84,7 +97,6 @@ header {
     color: rgba(0, 0, 0, 0.945);
     font-size: 2rem;
     font-weight: bolder; 
-
     font-family: "Baskervville SC", serif;
  }  
 
@@ -104,7 +116,7 @@ header {
     display: flex; 
     justify-content: center;
     align-items: start;
-    margin:8rem auto;
+    margin:6rem auto;
     overflow: hidden;
     position: relative; /* Asegura que los elementos posicionados relativamente o absolutamente dentro del contenedor se posicionen correctamente */
     
@@ -115,8 +127,8 @@ header {
     transition: transform 2s  ease-in-out;
     width: 100%; /* Asegura que el contenedor de diapositivas tenga el mismo ancho que el contenedor visible */
    
+} 
 
-}
 
 .slide {
     min-width: 100%;
@@ -135,13 +147,14 @@ main{
 
 }  
 
-.presentacion{
+.presentacion{ 
 
    box-shadow: -12px -14px 23px 3px rgba(0,0,0,0.75);
     -webkit-box-shadow: -12px -14px 23px 3px rgba(0,0,0,0.75);
     -moz-box-shadow: -12px -14px 23px 3px rgba(0,0,0,0.75);
     padding: 2rem 2rem;
     border-radius: 3%;
+    padding: 4rem 4rem;
     
 }
 
@@ -177,6 +190,7 @@ main{
 
 .servicio{ 
     width: 100%; 
+    padding: 1rem 0;
   
 }
 
@@ -192,14 +206,15 @@ main{
     -moz-box-shadow: -12px -14px 23px 3px rgba(0,0,0,0.75); 
     background-position: right;
     background-attachment: fixed; 
-    padding-bottom: 5rem; 
+     padding: 4rem 4rem;
     border-radius: 8px;
   
    
    
 }  
 .container-servicios{ 
-    width: 60%;
+    width: 70%; 
+    padding-top: 4rem;
     display: grid;
    grid-template-columns:  35% 35%;
    gap: 2.5rem;
@@ -212,15 +227,15 @@ main{
 
 
 .container_img-servicio{ 
-    padding: 3rem 0;
+    padding: 5rem 0;
     width: 100%;
-    height: auto;
+    margin-top: 4rem;
     display: grid;
     justify-content: center;
     align-items: start;
     grid-template-columns:20% 20% 20% 20%;
     grid-auto-flow: row;
-    gap: 2rem; 
+    gap: 4rem; 
     box-shadow: inset 1px 1px 10px 10px rgb(101, 101, 223);
     border-top-left-radius: 10%; 
     border-top-right-radius: 7px;
@@ -254,8 +269,7 @@ main{
 
  .servicio-titulo {
     text-align: center;
-    padding: 2rem ;
-    height: 4rem;
+    height: 8rem;
     border-bottom: 1px solid #030303; /* Corrige esta línea */
     width: 46.5%;
     font-family: "Carattere", cursive;
@@ -320,11 +334,10 @@ li {
 }  
 
 
-
-
 .clientes__container{
     width: 100%;
     height: 40vh;
+    max-height: 40vh;
     display: flex; 
     justify-content: center;
     align-items: center; 
@@ -361,6 +374,7 @@ li {
 }
 
 .container_slider-clientes {
+    width: 100%;
     display: flex;
     transition: transform 0.5s ease;
     scroll-behavior: auto;
@@ -412,15 +426,19 @@ li {
 
 footer {
     width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+
 
 }
 
 .video-container {
     position: relative;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
     border-radius: 6px;
+    padding: 5rem 0;
+    
 }
 
 .video-background {
@@ -441,7 +459,8 @@ footer {
 }
 
 .titulo-footer {
-    width: 25%;
+    width: 35%;
+    text-align: center;
     position: relative;
     z-index: 33433;
     color: #f8fafa;
@@ -458,20 +477,22 @@ footer {
 
 
 .footer__sociales{
-    position: relative;
+
     width: 100%;
+    height: auto;
+    padding: 6rem 0rem;
     z-index: 6666; 
     display: grid;
     justify-content: flex-start;
-    align-items: center;
-    gap: 6rem; 
-    margin-top: 3rem;
+    align-items: end;
+    gap: 7rem; 
+    margin-left: 3rem;
 
 } 
 
 .footer__Social { 
 
-    font-size: 2.5rem; 
+    font-size: 2rem; 
     z-index: 777777;
     font-family: "Baskervville SC", serif;
     font-weight: bolder; 
@@ -481,15 +502,13 @@ footer {
 }  
 
  .footer__link{ 
-color: rgb(250, 181, 52); 
-box-shadow: inset 10px 16px 16px 20px #030303; ; 
+ color: rgb(250, 181, 52); 
+ box-shadow: inset 10px 16px 16px 20px #030303; ; 
  padding: .4rem;
  letter-spacing: 2px;
  font-weight: bolder; 
  border-radius: 9px; 
  padding: 10px 12px; 
-
-
 
 
  } 
@@ -524,5 +543,1015 @@ box-shadow: inset 10px 16px 16px 20px #030303; ;
     margin-right: 2.5rem;
    
 } 
+
+/*=======================================================================================================*/ 
+
+/*****************************RESPONSIVE DESIGN*************************************************************/ 
+
+
+@media (min-width: 1600px) and (max-width: 1799px) {
+   
+  }
+  
+
+  @media (min-width: 1800px) {
+   
+  }
+
+
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+    
+  }
+  
+
+
+
+  
+
+  @media (min-width: 1200px) and (max-width: 1299px) { 
+
+    .container-list{
+       
+        gap: 13rem;
+       
+       }  
+       .container-servicios{ 
+        width: 60%;
+        display: grid;
+       grid-template-columns: 40% 40%;
+       gap: 2rem;
+       margin-left: -2rem;
+        grid-template-rows: auto; 
+        z-index: 88888;
+     
+    
+    } 
+
+    .img_clientes {
+        width: 7rem; /* Muestra 5 imágenes a la vez */
+        flex-shrink: 0;
+        height: auto;
+        padding: 7px;
+        border-radius: 50%;
+    } 
+
+    .clientes__container{
+        height: unset;  
+    } 
+
+    footer{
+        height: 100vh;
+    }
+    
+
+  }
+  
+
+  @media (min-width: 992px) and (max-width: 1199px) {   
+
+    .link{
+        font-size: 1.7rem;
+          
+     }   
+
+    .container-list{
+       
+        gap: 8rem;
+
+       }  
+
+       .container-servicios{ 
+       grid-template-columns: 40% 50%;
+       gap: 2rem;
+       margin-left: -2rem;
+      
+    
+    }  
+
+    .slide{
+        height:35rem;
+    }
+
+    .servicio-li{
+        font-size: 1.5rem;
+    } 
+
+    .img_clientes {
+        width: 6rem; /* Muestra 5 imágenes a la vez */
+        
+    }
+    
+    .clientes__container{
+        height: unset;  
+    }  
+
+    footer{
+        height: 100vh;
+    }
+    
+    
+
+  
+  }
+  
+ 
+  @media (min-width: 768px) and (max-width: 991px) {   
+
+    
+
+    .link{
+        font-size: 1.5rem;
+          
+     }   
+
+     .slide {
+
+        height: 30rem; /* Asegura que cada diapositiva tenga la misma altura que el contenedor visible */
+      
+    
+    }  
+
+
+    .titulo-presentacion{
+        font-size: 4.5rem;
+
+    }
+
+
+     .texto-presentacion{ 
+        font-size: 2rem;
+
+
+
+     }
+
+
+    .container-list{
+       
+        gap: 5rem;
+       }   
+       
+       .servicio-titulo {
+   
+        font-size: 4.5rem;
+       
+     } 
+
+     
+
+     .container-servicios{ 
+   
+       grid-template-columns:  34% 45%; 
+       margin-left: -3rem;
+      
+     
+       z-index: 88888;
+
+    } 
+
+    .servicio-li {
+        font-size: 1.3rem;
+        
+    } 
+
+   
+    
+    .img-servicio{ 
+        margin-left: 2rem;
+        width: 11rem;
+        height: 11rem; 
+      
+    }    
+
+    .picture2{
+        margin-top: 3rem;
+    
+     } 
+    
+     .picture6{ 
+        margin-top: 3rem;
+    
+     } 
+    
+     .picture4{
+        margin-top:3rem;
+    
+     } 
+    
+     .picture8{ 
+        margin-top:3rem;
+    
+     }  
+
+      .titulo__clientes{
+        font-size: 4.5rem;
+      }
+   
+      .cliente__texto{
+        font-size: 1.5rem;
+      }
+    
+    
+     .titulo-footer {
+        width: 45%; 
+        font-size: 4rem;
+       text-align: center;
+    }
+    
+    .footer__Social { 
+
+        font-size: 1.7rem; 
+        z-index: 777777;
+        font-family: "Baskervville SC", serif;
+        font-weight: bolder; 
+       
+        
+    }  
+
+    .footer__sociales{
+        gap: 4rem; 
+    
+    } 
+
+    .img_clientes {
+        width: 7.5rem; /* Muestra 5 imágenes a la vez */
+        
+    } 
+    
+
+        footer{
+            height:100vh;
+        }
+    
+
+    
+  }
+  
+  @media (min-width: 576px) and (max-width: 767px) {
+    .contenedor {
+        padding: unset;
+        margin: unset;
+        width: unset;
+    }
+
+    /* MENU HAMBURGUESA POR AQUI */
+    header {
+        width: 100%;
+        padding: 1rem; 
+    }
+
+    .menu-bars {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        gap: 6rem;
+        position: relative;
+        z-index: 9999999999999999999;
+        color: #030303;
+        margin-left: 1rem;
+        padding: 2rem 0;
+    }
+
+    .menu-Servicios {
+        width: 100%;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        line-height: 1.3;
+        text-shadow: 2px 2px 42px #030303;
+        font-family: "Baskervville SC", serif;
+       
+      
+        
+    }
+
+    .container-logo {
+        display: none;
+    }
+
+    .logo__responsive {
+        display: block;
+        width: 50%;
+        max-width: 50%;
+       
+    }
+
+    .imagen-logo {
+        width: 100%;
+        max-width: 15rem;
+        position: relative;
+        left: 1rem;
+    }
+
+    .nav {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: hsla(240, 56%, 42%, 0.616);
+        z-index: 6666666;
+        clip-path: circle(0% at 50% 50%);
+        transition: clip-path 2s ease-out;
+        padding: 1rem; /* Añadido para que no se pegue a los bordes */
+      
+     
+      
+    }
+
+    .container-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: flex-start;
+        align-items: center;
+        z-index: 6666666;
+
+    }
+
+    .link {
+        color: aliceblue;
+        letter-spacing: 2px;
+        font-weight: 400;
+        position: relative;
+        z-index: 99999999999999999999999999999999999999;
+    }
+
+    .item {
+        margin-top: 2rem;
+    }
+
+    .modificado {
+        transition: 3s ease-out;
+        color: aliceblue;
+        position: relative;
+       left: 7rem;
+    }
+
+    .nav.activo {
+        clip-path: circle(150% at 50% 50%);
+    }
+
+    .slider-container {
+        width: 100%;
+        overflow: hidden; /* Para ocultar desbordes */
+    }
+
+    .titulo-presentacion {
+        font-size: 3.5rem;
+        text-align: center; /* Centrado del título */
+        margin: 0 auto; /* Asegura que no haya espacio adicional */
+    }
+
+    .texto-presentacion {
+        font-size: 1.7rem;
+        text-align: center; /* Centrado del texto */
+        margin: 0 auto; /* Asegura que no haya espacio adicional */
+    }  
+
+    .presentacion{
+        padding: 4rem 4rem;
+    }
+
+    .servicio{
+        padding: 4rem 5rem;
+        margin: 0 auto;
+       
+    }
+
+    .servicio-contenido {
+        background-size: 100%;
+        opacity: unset;
+    }
+
+    .servicio-titulo {
+        color: #f8fafa;
+        box-shadow: inset -12px -14px 23px 3px rgba(0, 0, 0, 0.75);
+    }
+
+    .container-servicios {
+        grid-template-columns: 70% 70%;
+        color: #f8fafa;
+    }
+
+    .servicio-li {
+        font-size: 1.5rem;
+        padding: 4px 4px;
+        border: 4%;
+        color: #f8fafa;
+        box-shadow: inset -12px -14px 23px 3px rgba(0, 0, 0, 0.75);
+    }
+
+    .img-servicio {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    .container_img-servicio {
+        grid-template-columns: 30% 30%;
+        margin-left: -2rem;
+        grid-auto-flow: row;
+        gap: 7rem;
+        box-shadow: inset 1px 1px 10px 10px rgb(101, 101, 223);
+    } 
+
+    
+
+    .picture2,
+    .picture4,
+    .picture6,
+    .picture8 {
+        margin-top: 2rem;
+    } 
+
+    .clientes{ 
+
+        padding: 4rem 4rem;
+
+    }
+
+    .titulo__clientes {
+        font-size: 3.5rem;
+        font-weight: 800;
+        text-align: center; /* Centrado del título */
+        margin: 0 auto; /* Asegura que no haya espacio adicional */
+    }
+
+    .cliente__texto {
+        font-size: 1.5rem;
+        margin: 0 auto; /* Asegura que no haya espacio adicional */
+    } 
+
+   
+
+    .clientes__container{
+        width: 100%;
+        height: 40vh;
+        max-height: 40vh;
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        
+    } 
+
+    .img_clientes {
+        width: 7rem;
+    }
+
+    .flecha__izquierda,
+    .flecha__derecha {
+        font-size: 2.5rem;
+    }
+
+    .titulo-footer {
+        width: 45%;
+        font-size: 4rem;
+    }
+
+    .footer__Social {
+        font-size: 1.5rem;
+    }
+
+    .footer__sociales {
+        gap: 4rem;
+        width: 90%;
+    }
+
+    .icon-social {
+        font-size: 1px;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 575px) { 
+    /*MENU HAMBURGUESA POR AQUI*/
+    .contenedor {
+        padding: unset;
+        margin: unset;
+        width: unset;
+    }
+
+    /* MENU HAMBURGUESA POR AQUI */
+    header {
+        width: 100%;
+        padding: 1rem; /* Añadido para reducir el tamaño del header */
+    }
+
+    .menu-bars {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        gap: 6rem;
+        position: relative;
+        z-index: 9999999999999999999;
+        color: #030303;
+        margin-left: 1rem;
+        padding: 2rem 0;
+    }
+
+    .menu-Servicios {
+        width: 100%;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        line-height: 1.3;
+        text-shadow: 2px 2px 42px #030303;
+        font-family: "Baskervville SC", serif;
+       
+      
+        
+    }
+
+    .container-logo {
+        display: none;
+    }
+
+    .logo__responsive {
+        display: block;
+        width: 50%;
+        max-width: 50%;
+       
+    }
+
+    .imagen-logo {
+        width: 100%;
+        max-width: 15rem;
+        position: relative;
+        left: 1rem;
+    }
+
+    .nav {
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: hsla(240, 56%, 42%, 0.616);
+        z-index: 6666666;
+        clip-path: circle(0% at 50% 50%);
+        transition: clip-path 2s ease-out;
+        padding: 1rem; /* Añadido para que no se pegue a los bordes */
+        box-sizing: border-box;
+        overflow-y: auto; /* Agregado para permitir scrolling si hay mucho contenido */
+      
+    }
+
+    .container-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 6666666;
+        position: absolute;
+    }
+
+    .link {
+        color: aliceblue;
+        letter-spacing: 2px;
+        font-weight: 400;
+        position: relative;
+        z-index: 99999999999999999999999999999999999999;
+    }
+
+    .item {
+        margin-top: 2rem;
+    }
+
+    .modificado {
+        transition: 3s ease-out;
+        color: aliceblue;
+        position: relative;
+       left: 7rem;
+    }
+
+    .nav.activo {
+        clip-path: circle(150% at 50% 50%);
+    }
+
+    .slider-container {
+        width: 100%;
+        overflow: hidden; /* Para ocultar desbordes */
+    }
+
+    .titulo-presentacion {
+        font-size: 3.5rem;
+        text-align: center; /* Centrado del título */
+        margin: 0 auto; /* Asegura que no haya espacio adicional */
+    }
+
+    .texto-presentacion {
+        font-size: 1.7rem;
+        text-align: center; /* Centrado del texto */
+        margin: 0 auto; /* Asegura que no haya espacio adicional */
+    }  
+
+    .presentacion{
+        padding: 4rem 4rem;
+    }
+
+    .servicio{
+        padding: 4rem 5rem;
+        margin: 0 auto;
+       
+    }
+
+    .servicio-contenido {
+        background-size: 100%;
+        opacity: unset;
+    }
+
+    .servicio-titulo {
+        width: 100%;
+        background: linear-gradient(555deg, hsla(0, 14%, 89%, 0.884), hsla(0, 9%, 94%, 0.842)); /* Degradado de negro a blanco */
+        opacity: .8;
+        font-size: 6rem;
+        font-weight: bolder;
+     
+     
+    }
+
+    .container-servicios {
+        width: 100%;
+        grid-template-columns: 100% ;
+        color: #f8fafa;
+    }
+
+    .servicio-li {
+        font-size: 1.7rem;
+        padding: 4px 4px;
+        border: 4%;
+        color: #f8fafa;
+        box-shadow: inset -12px -14px 23px 3px rgba(0, 0, 0, 0.75);
+    }
+
+    .img-servicio {
+        width: 20rem;
+        height: 17rem;
+         margin: auto;
+         border-radius: 10%;
+    }
+
+    .container_img-servicio {
+        grid-template-columns: 100%;
+        margin-left: unset;
+        grid-auto-flow: row;
+        gap: 7rem;
+        box-shadow: inset 1px 1px 10px 10px rgb(101, 101, 223);
+    } 
+
+    
+
+    
+    .clientes{ 
+
+        padding: 4rem 4rem;
+
+    }
+
+    .titulo__clientes {
+        font-size: 3.5rem;
+        font-weight: 800;
+        text-align: center; /* Centrado del título */
+        margin: 0 auto; /* Asegura que no haya espacio adicional */
+    }
+
+    .cliente__texto {
+        font-size: 1.5rem;
+       
+        margin: 0 auto; /* Asegura que no haya espacio adicional */
+    } 
+
+   
+
+    .clientes__container{
+        width: 100%;
+        height: 40vh;
+        max-height: 40vh;
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        
+    } 
+
+    .img_clientes {
+        width: 7rem;
+    }
+
+    .flecha__izquierda,
+    .flecha__derecha {
+        font-size: 2.5rem;
+    } 
+
+     footer{
+        height: 100vh;
+     }
+    
+    .titulo-footer {
+        width: 100%;
+        font-size: 4rem;
+    } 
+   
+
+    .footer-titulos{
+        display: flex;
+        justify-content: space-between; 
+        flex-direction: column;
+       
+        align-items: center;
+    } 
+
+    .footer_volver{
+        align-self: flex-end;
+        font-size: 1.7rem;
+    }
+    
+
+    .footer__Social {
+        font-size: 1.5rem;
+    }
+
+    .footer__sociales { 
+        width: 100%;
+        display: grid;
+        place-content:center;
+        gap: 3rem;
+        width: 100%;
+    }
+
+    
+ 
+
+
+    /* Estilos para dispositivos con un ancho máximo de 480px */
+  } 
+
+  @media (min-width: 411px) and  (max-width: 489px)   {  
+
+
+
+   .nav{
+    height: 60vh;
+   }
+
+    .titulo-footer {
+        width: 100%;
+        font-size: 4rem;
+    } 
+   
+    footer{
+        height: 100vh
+    }
+
+    .footer-titulos{
+        display: flex;
+        justify-content: space-between; 
+        flex-direction: column;
+       
+        align-items: center;
+    } 
+
+    .footer_volver{
+        align-self: flex-end;
+        font-size: 1.7rem;
+    }
+    
+
+    .footer__Social {
+        font-size: 1.2rem;
+    } 
+
+     
+    
+
+    .footer__sociales { 
+        width: 100%;
+        display: grid;
+        place-content:center;
+        gap: 4rem;
+        width: 100%;
+        margin-left: unset;
+    } 
+
+    .footer__Social i{
+        color: #f8fafa;
+        font-size: 2rem; 
+        text-shadow: 10px 16px 16px #030303; ;
+    }    
+
+    .footer__link{
+        font-size: 1.5rem; 
+
+    }
+
+
+    
+ 
+  }
+ 
+ 
+  
+
+  
+  @media (min-width: 403px) and (max-width: 410px)  {
+     .titulo-footer {
+        width: 100%;
+        font-size: 4rem;
+    } 
+   
+
+    .footer-titulos{
+        display: flex;
+        justify-content: space-between; 
+        flex-direction: column;
+       
+        align-items: center;
+    } 
+
+    .footer_volver{
+        align-self: flex-end;
+        font-size: 1.7rem;
+    } 
+
+    .footer__sociales{
+        margin-left: unset;
+        padding: unset;
+      
+       
+    }
+    
+
+    .footer__Social {
+        font-size: 1.3rem; 
+        padding: 2rem;
+    } 
+
+    .footer__Social i{
+        font-size: 1rem;
+    }
+
+   
+    
+ 
+  
+  } 
+
+
+  @media (max-width:402px){ 
+
+    .nav {
+    
+        height: 60vh;
+        
+     
+      
+    } 
+
+    footer{
+        height: 100vh;
+    }
+
+    .footer__sociales{
+        width: 100%;
+        margin-left: unset;
+        padding: 3rem 0; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+      
+       
+    } 
+
+    .footer__Social {
+        font-size: 1rem; 
+        padding: 1rem;
+        gap: unset;
+    } 
+
+    .footer__Social i{
+        font-size: 1rem;
+    }
+
+
+
+  }  
+
+  
+
+
+
+  @media (max-width:325px){  
+
+    .img-servicio{
+        width: 13rem;
+        height: 13rem;
+    } 
+
+    
+
+    .servicio-li{ 
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    
+    .footer__Social i{
+        display: none;
+    }  
+
+    .footer__Sociales {
+       width: 100%;
+        padding: 4rem 0;
+        gap: 2rem;
+        overflow: hidden;
+    } 
+
+    .footer__Social {
+        width: 100%;
+        font-size: 1rem; 
+        
+    }
+
+    
+
+
+  }  
+
+  @media (max-width:287px){  
+
+    .nav{
+        height: 40vh;
+    }
+
+    
+    .footer__Social i{
+        display: none;
+    }  
+
+    .footer__Sociales {
+       width: 100%;
+        padding: 3rem 0;
+        gap: 1rem;
+    } 
+
+    .footer__Social {
+        width: 100%;
+        font-size: .8rem; 
+        
+    }
+
+    
+
+
+  } 
+
+
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
